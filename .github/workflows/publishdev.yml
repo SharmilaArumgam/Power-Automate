@@ -22,8 +22,8 @@ jobs:
     - name: Pack solution
       uses: microsoft/powerplatform-actions/pack-solution@v0
       with:
-        solution-folder: solutions/Test1
-        solution-file: out/solutions/Test1.zip
+        solution-folder: solutions/Test2
+        solution-file: out/solutions/Test2.zip
         solution-type: Unmanaged
 
     - name: Import solution as unmanaged to build env
@@ -32,7 +32,7 @@ jobs:
         environment-url: 'https://org4c8b6d8b.crm.dynamics.com/'
         user-name: 'SharmilaA@M365x510324.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-file: out/solutions/Test1.zip
+        solution-file: out/solutions/Test2.zip
         force-overwrite: true
         publish-changes: true
 
@@ -42,9 +42,9 @@ jobs:
         environment-url: 'https://org4c8b6d8b.crm.dynamics.com/'
         user-name: 'SharmilaA@M365x510324.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-name: Test1
+        solution-name: Test2
         managed: true
-        solution-output-file: out/ship/Test1.zip
+        solution-output-file: out/ship/Test2.zip
 
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
@@ -77,6 +77,6 @@ jobs:
         environment-url: 'https://org61732c43.crm.dynamics.com/'
         user-name: 'SharmilaA@M365x510324.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-file: out/release/Test1.zip
+        solution-file: out/release/Test2.zip
         force-overwrite: true
         publish-changes: true
