@@ -50,7 +50,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: managedSolutions
-        path: out/ship/Test1.zip
+        path: out/ship/Test2.zip
 
   release-to-staging:
     needs: [ convert-to-managed ]
